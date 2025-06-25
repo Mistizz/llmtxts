@@ -1,0 +1,8992 @@
+NotebookLM用 全サイトコンテンツ (パート 1/1)
+サイト: developer.chatwork.com
+対象パス: /reference/* 配下
+抽出日時: 2025-06-25 16:12:01
+発見ページ数: 51ページ
+取得ページ数: 51ページ
+このファイル: 51ページ (ページ1〜51)
+
+================================================================================
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/contacts
+タイトル: コンタクト一覧を取得する
+==================================================
+
+200
+成功した
+array of objects
+object
+account_id
+integer
+required
+アカウントID
+room_id
+integer
+required
+ダイレクトチャットのルームID
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+コンタクトが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/contacts \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/delete-incoming_requests-request_id
+タイトル: コンタクト承認依頼を拒否する
+==================================================
+
+request_id
+integer
+required
+リクエストID
+204
+成功した
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+コンタクト承認依頼が存在しない
+object
+errors
+array of strings
+required
+errors
+*
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+DELETE \
+2
+--url
+https://api.chatwork.com/v2/incoming_requests/request_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+*/*
+204
+application/json
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+404 - コンタクト承認依頼が存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/delete-rooms-room_id
+タイトル: チャットを退席/削除する
+==================================================
+
+room_id
+integer
+required
+ルームID
+action_type
+string
+required
+操作の種類
+Show Details
+leave
+退席
+delete
+削除
+leave
+delete
+204
+成功した
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットを退席/削除する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+DELETE \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+action_type
+=
+leave
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+*/*
+204
+application/json
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - マイチャットまたはダイレクトチャットを退席/削除する
+403 - 存在しないグループチャットを退席/削除する
+429 - APIの利用回数制限を超過した
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/delete-rooms-room_id-link
+タイトル: チャットへの招待リンクを削除する
+==================================================
+
+room_id
+integer
+required
+ルームID
+200
+成功した
+object
+public
+boolean
+required
+招待リンクを公開するか
+url
+string
+招待リンクのURL
+need_acceptance
+boolean
+参加に管理者の承認を必要とするか
+description
+string
+招待リンクの説明文
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットへの招待リンクを変更する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+DELETE \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/link \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットへの招待リンクを変更する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/delete-rooms-room_id-messages-message_id
+タイトル: チャットのメッセージを削除する
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+required
+メッセージID
+200
+成功した
+object
+message_id
+string
+required
+削除したメッセージのID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+メッセージを削除する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+DELETE \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/message_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分以外が投稿したメッセージを削除する
+403 - 削除できないシステムメッセージを削除する
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-contacts
+タイトル: コンタクト一覧を取得する
+==================================================
+
+200
+成功した
+array of objects
+object
+account_id
+integer
+required
+アカウントID
+room_id
+integer
+required
+ダイレクトチャットのルームID
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+コンタクトが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/contacts \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-incoming_requests
+タイトル: コンタクト承認依頼一覧を取得する
+==================================================
+
+200
+成功した
+array of objects
+object
+request_id
+integer
+required
+コンタクト承認依頼ID
+account_id
+integer
+required
+アカウントID
+message
+string
+required
+length between 1 and 65535
+依頼メッセージ
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+コンタクト承認依頼が0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/incoming_requests \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-me
+タイトル: 自分の情報を取得する
+==================================================
+
+200
+成功した
+object
+account_id
+integer
+required
+アカウントID
+room_id
+integer
+required
+ルームID
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+title
+string
+required
+役職
+url
+string
+required
+URL
+introduction
+string
+required
+自己紹介
+mail
+string
+required
+メールアドレス
+tel_organization
+string
+required
+電話番号（勤務先）
+tel_extension
+string
+required
+電話番号（内線）
+tel_mobile
+string
+required
+電話番号（携帯）
+skype
+string
+required
+Skype
+facebook
+string
+required
+Facebook
+twitter
+string
+required
+Twitter
+avatar_image_url
+string
+required
+アバター画像URL
+login_mail
+string
+required
+Chatwork登録メールアドレス（ログインメールアドレス）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/me \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-my-status
+タイトル: 自分の状態を取得する
+==================================================
+
+200
+成功した
+object
+unread_room_num
+integer
+required
+未読があるチャットの数
+mention_room_num
+integer
+required
+自分宛ての未読があるチャットの数
+mytask_room_num
+integer
+required
+タスクがあるチャットの数
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+mytask_num
+integer
+required
+自分が担当者のタスクの数
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/my/status \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-my-tasks
+タイトル: 自分のタスク一覧を取得する
+==================================================
+
+assigned_by_account_id
+integer
+タスクの依頼者のアカウントID
+status
+string
+タスクの完了状態
+Show Details
+open
+未完了
+done
+完了
+open
+done
+200
+成功した
+array of objects
+object
+task_id
+integer
+required
+タスクID
+room
+object
+required
+タスクがあるチャットの情報
+room object
+assigned_by_account
+object
+required
+タスクの依頼者のアカウント情報
+account object
+message_id
+string
+required
+タスクのメッセージID
+body
+string
+required
+length ≤ 65535
+タスクの内容
+limit_time
+integer
+required
+タスクの期限。Unix時間（秒）
+status
+string
+required
+タスクの完了状態
+open
+done
+Show Details
+open
+未完了
+done
+完了
+limit_type
+string
+required
+タスクの期限の種類
+none
+date
+time
+Show Details
+none
+期限なし
+date
+日付
+time
+時間
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+タスクが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/my/tasks \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms
+タイトル: チャット一覧を取得する
+==================================================
+
+200
+成功した
+array of objects
+object
+room_id
+integer
+required
+ルームID
+name
+string
+required
+length between 1 and 255
+チャットの名前
+type
+string
+required
+チャットの種類
+my
+direct
+group
+Show Details
+my
+マイチャット
+direct
+ダイレクトチャット
+group
+グループチャット
+role
+string
+required
+自分のチャットの権限
+admin
+member
+readonly
+Show Details
+admin
+管理者
+member
+メンバー
+readonly
+閲覧のみ
+sticky
+boolean
+required
+ピンで固定されているか
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+mytask_num
+integer
+required
+自分が担当者のタスクの数
+message_num
+integer
+required
+メッセージの数
+file_num
+integer
+required
+ファイルの数
+task_num
+integer
+required
+タスクの数
+icon_path
+string
+required
+チャットのアイコン画像URL
+last_update_time
+integer
+required
+チャットが最後に更新された時刻。Unix時間（秒）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id
+タイトル: チャットの情報を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+200
+成功した
+object
+room_id
+integer
+required
+ルームID
+name
+string
+required
+length between 1 and 255
+チャットの名前
+type
+string
+required
+チャットの種類
+my
+direct
+group
+Show Details
+my
+マイチャット
+direct
+ダイレクトチャット
+group
+グループチャット
+role
+string
+required
+自分のチャットの権限
+admin
+member
+readonly
+Show Details
+admin
+管理者
+member
+メンバー
+readonly
+閲覧のみ
+sticky
+boolean
+required
+ピンで固定されているか
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+mytask_num
+integer
+required
+自分が担当者のタスクの数
+message_num
+integer
+required
+メッセージの数
+file_num
+integer
+required
+ファイルの数
+task_num
+integer
+required
+タスクの数
+icon_path
+string
+required
+チャットのアイコン画像URL
+last_update_time
+integer
+required
+チャットが最後に更新された時刻。Unix時間（秒）
+description
+string
+required
+チャットの概要
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットの情報を取得する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-files
+タイトル: チャットのファイル一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+account_id
+integer
+アップロードしたアカウントのID
+200
+成功した
+array of objects
+object
+file_id
+integer
+required
+ファイルID
+account
+object
+required
+ファイルをアップロードしたアカウントの情報
+account object
+message_id
+string
+required
+メッセージID
+filename
+string
+required
+ファイルの名前
+filesize
+integer
+required
+ファイルサイズ
+upload_time
+integer
+required
+ファイルがアップロードされた時刻。Unix時間（秒）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+ファイルが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのファイルの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/files \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのファイルの情報を取得する
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-files-file_id
+タイトル: チャットのファイルの情報を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+file_id
+integer
+required
+ファイルID
+create_download_url
+integer
+Defaults to 0
+ダウンロードURLを作成するか。
+作成されるダウンロードURLは30秒間のみ有効です。
+200
+成功した
+object
+file_id
+integer
+required
+ファイルID
+account
+object
+required
+ファイルをアップロードしたアカウントの情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+message_id
+string
+required
+メッセージID
+filename
+string
+required
+ファイルの名前
+filesize
+integer
+required
+ファイルサイズ
+upload_time
+integer
+required
+ファイルがアップロードされた時刻。Unix時間（秒）
+download_url
+string
+ファイルのダウンロードURL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのファイルの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+ファイルが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+'https://api.chatwork.com/v2/rooms/room_id/files/file_id?create_download_url=0'
+\
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのファイルの情報を取得する
+404 - ファイルが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-link
+タイトル: チャットへの招待リンクを取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+200
+成功した
+object
+public
+boolean
+required
+招待リンクを公開するか
+url
+string
+招待リンクのURL
+need_acceptance
+boolean
+参加に管理者の承認を必要とするか
+description
+string
+招待リンクの説明文
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/link \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した（招待リンクが公開されている）
+200 - 成功した（招待リンクが公開されていない）
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットの情報を取得する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-members
+タイトル: チャットのメンバー一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+200
+成功した
+array of objects
+object
+account_id
+integer
+required
+アカウントID
+role
+string
+required
+チャットの権限
+admin
+member
+readonly
+Show Details
+admin
+管理者
+member
+メンバー
+readonly
+閲覧のみ
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメンバー一覧を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/members \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメンバー一覧を取得する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-messages
+タイトル: チャットのメッセージ一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+force
+integer
+Defaults to 0
+強制的に最大件数まで取得するかどうか。
+0
+を指定した場合（既定）は前回取得分からの差分のみを返しますが、
+1
+を指定した場合は強制的に最新のメッセージを最大100件まで取得します。
+200
+成功した
+array of objects
+object
+message_id
+string
+required
+メッセージID
+account
+object
+required
+メッセージを投稿したアカウントの情報
+account object
+body
+string
+required
+length between 1 and 65535
+メッセージ本文
+send_time
+integer
+required
+メッセージが送信された時刻。Unix時間（秒）
+update_time
+integer
+required
+Defaults to 0
+メッセージが最後に更新された時刻。Unix時間（秒）
+object
+chatwork-message-limitation
+boolean
+メッセージの閲覧制限が適用されているかどうか。
+閲覧制限が適用されている場合は
+true
+になり、閲覧制限が適用されていない場合は省略されます。
+chatwork-message-limitation-summary
+string
+メッセージが閲覧制限されている理由。
+閲覧制限が適用されていない場合は省略されます。
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+メッセージが0件だった
+object
+chatwork-message-limitation
+boolean
+メッセージの閲覧制限が適用されているかどうか。
+閲覧制限が適用されている場合は
+true
+になり、閲覧制限が適用されていない場合は省略されます。
+chatwork-message-limitation-summary
+string
+メッセージが閲覧制限されている理由。
+閲覧制限が適用されていない場合は省略されます。
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+'https://api.chatwork.com/v2/rooms/room_id/messages?force=0'
+\
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを取得する
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-messages-message_id
+タイトル: チャットのメッセージを取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+required
+メッセージID
+200
+成功した
+object
+message_id
+string
+required
+メッセージID
+account
+object
+required
+メッセージを投稿したアカウントの情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+body
+string
+required
+length between 1 and 65535
+メッセージ本文
+send_time
+integer
+required
+メッセージが送信された時刻。Unix時間（秒）
+update_time
+integer
+required
+Defaults to 0
+メッセージが最後に更新された時刻。Unix時間（秒）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/message_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを取得する
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-tasks
+タイトル: チャットのタスク一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+account_id
+integer
+タスクの担当者のアカウントID
+assigned_by_account_id
+integer
+タスクの依頼者のアカウントID
+status
+string
+タスクの完了状態
+Show Details
+open
+未完了
+done
+完了
+open
+done
+200
+成功した
+array of objects
+object
+task_id
+integer
+required
+タスクID
+account
+object
+required
+タスクの担当者のアカウント情報
+account object
+assigned_by_account
+object
+required
+タスクの依頼者のアカウント情報
+account object
+message_id
+string
+required
+タスクのメッセージID
+body
+string
+required
+length ≤ 65535
+タスクの内容
+limit_time
+integer
+required
+Defaults to 0
+タスクの期限。Unix時間（秒）
+status
+string
+required
+タスクの完了状態
+open
+done
+Show Details
+open
+未完了
+done
+完了
+limit_type
+string
+required
+タスクの期限の種類
+none
+date
+time
+Show Details
+none
+期限なし
+date
+日付
+time
+時間
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+タスクが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのタスクの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/tasks \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのタスクの情報を取得する
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/get-rooms-room_id-tasks-task_id
+タイトル: チャットのタスクの情報を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+task_id
+integer
+required
+タスクID
+200
+成功した
+object
+task_id
+integer
+required
+タスクID
+account
+object
+required
+タスクの担当者のアカウント情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+assigned_by_account
+object
+required
+タスクの依頼者のアカウント情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+message_id
+string
+required
+タスクのメッセージID
+body
+string
+required
+length ≤ 65535
+タスクの内容
+limit_time
+integer
+required
+Defaults to 0
+タスクの期限。Unix時間（秒）
+status
+string
+required
+タスクの完了状態
+open
+done
+Show Details
+open
+未完了
+done
+完了
+limit_type
+string
+required
+タスクの期限の種類
+none
+date
+time
+Show Details
+none
+期限なし
+date
+日付
+time
+時間
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのタスクの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+タスクが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/tasks/task_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのタスクの情報を取得する
+404 - タスクが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/incoming_requests
+タイトル: コンタクト承認依頼一覧を取得する
+==================================================
+
+200
+成功した
+array of objects
+object
+request_id
+integer
+required
+コンタクト承認依頼ID
+account_id
+integer
+required
+アカウントID
+message
+string
+required
+length between 1 and 65535
+依頼メッセージ
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+コンタクト承認依頼が0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/incoming_requests \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/incoming_requestsrequest_id
+タイトル: コンタクト承認依頼を承認する
+==================================================
+
+request_id
+integer
+required
+リクエストID
+200
+成功した
+object
+account_id
+integer
+required
+アカウントID
+room_id
+integer
+required
+ダイレクトチャットのルームID
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足しているか不正な値が指定されている
+組織外アカウントとのコンタクト数が上限に達している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+コンタクト承認依頼が存在しない
+object
+errors
+array of strings
+required
+errors
+*
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/incoming_requests/request_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+400 - 組織外アカウントとのコンタクト数が上限に達している
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+404 - コンタクト承認依頼が存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/me
+タイトル: 自分の情報を取得する
+==================================================
+
+200
+成功した
+object
+account_id
+integer
+required
+アカウントID
+room_id
+integer
+required
+ルームID
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+title
+string
+required
+役職
+url
+string
+required
+URL
+introduction
+string
+required
+自己紹介
+mail
+string
+required
+メールアドレス
+tel_organization
+string
+required
+電話番号（勤務先）
+tel_extension
+string
+required
+電話番号（内線）
+tel_mobile
+string
+required
+電話番号（携帯）
+skype
+string
+required
+Skype
+facebook
+string
+required
+Facebook
+twitter
+string
+required
+Twitter
+avatar_image_url
+string
+required
+アバター画像URL
+login_mail
+string
+required
+Chatwork登録メールアドレス（ログインメールアドレス）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/me \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/mystatus
+タイトル: 自分の状態を取得する
+==================================================
+
+200
+成功した
+object
+unread_room_num
+integer
+required
+未読があるチャットの数
+mention_room_num
+integer
+required
+自分宛ての未読があるチャットの数
+mytask_room_num
+integer
+required
+タスクがあるチャットの数
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+mytask_num
+integer
+required
+自分が担当者のタスクの数
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/my/status \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/mytasks
+タイトル: 自分のタスク一覧を取得する
+==================================================
+
+assigned_by_account_id
+integer
+タスクの依頼者のアカウントID
+status
+string
+タスクの完了状態
+Show Details
+open
+未完了
+done
+完了
+open
+done
+200
+成功した
+array of objects
+object
+task_id
+integer
+required
+タスクID
+room
+object
+required
+タスクがあるチャットの情報
+room object
+assigned_by_account
+object
+required
+タスクの依頼者のアカウント情報
+account object
+message_id
+string
+required
+タスクのメッセージID
+body
+string
+required
+length ≤ 65535
+タスクの内容
+limit_time
+integer
+required
+タスクの期限。Unix時間（秒）
+status
+string
+required
+タスクの完了状態
+open
+done
+Show Details
+open
+未完了
+done
+完了
+limit_type
+string
+required
+タスクの期限の種類
+none
+date
+time
+Show Details
+none
+期限なし
+date
+日付
+time
+時間
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+タスクが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/my/tasks \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/post-rooms
+タイトル: グループチャットを作成する
+==================================================
+
+name
+string
+required
+length between 1 and 255
+チャットの名前
+description
+string
+チャットの概要
+link
+integer
+Defaults to 0
+招待リンクを作成するか
+link_code
+string
+length between 1 and 50
+招待リンクのパス部分。
+省略するとランダムな文字列となります。使用できない文字を含んでいる場合、またはすでに存在する値が指定された場合は400エラーを返します。
+link_need_acceptance
+integer
+Defaults to 1
+参加に管理者の承認を必要とするか
+members_admin_ids
+string
+required
+管理者権限にするメンバーの一覧。
+コンタクト済みもしくは組織内のアカウントのIDをカンマ区切りで指定してください。少なくとも1人以上のアカウントを指定する必要があります。
+members_member_ids
+string
+メンバー権限にするメンバーの一覧。
+コンタクト済みもしくは組織内のアカウントのIDをカンマ区切りで指定してください。
+members_readonly_ids
+string
+閲覧のみ権限にするメンバーの一覧。
+コンタクト済みもしくは組織内のアカウントのIDをカンマ区切りで指定してください。
+icon_preset
+string
+チャットのアイコンの種類
+meeting
+group
+check
+document
+meeting
+event
+project
+business
+study
+security
+star
+idea
+heart
+magcup
+beer
+music
+sports
+travel
+200
+成功した
+object
+room_id
+integer
+required
+作成したグループチャットのルームID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+POST \
+2
+--url
+https://api.chatwork.com/v2/rooms \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+link
+=
+0
+\
+6
+--data
+link_need_acceptance
+=
+1
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/post-rooms-room_id-files
+タイトル: チャットにファイルをアップロードする
+==================================================
+
+room_id
+integer
+required
+ルームID
+file
+file
+required
+アップロードするファイルのバイナリ。
+ファイルサイズの上限は5MBです。
+message
+string
+length between 1 and 65535
+メッセージ本文
+200
+成功した
+object
+file_id
+integer
+required
+ファイルID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットにファイルをアップロードする権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+POST \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/files \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: multipart/form-data'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットにファイルをアップロードする
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/post-rooms-room_id-link
+タイトル: チャットへの招待リンクを作成する
+==================================================
+
+room_id
+integer
+required
+ルームID
+code
+string
+length between 1 and 50
+招待リンクのコード部分。
+省略するとランダムな文字列となります。
+need_acceptance
+integer
+Defaults to 1
+参加に管理者の承認を必要とするか
+description
+string
+招待リンクの説明文
+200
+成功した
+object
+public
+boolean
+required
+招待リンクを公開するか
+url
+string
+招待リンクのURL
+need_acceptance
+boolean
+参加に管理者の承認を必要とするか
+description
+string
+招待リンクの説明文
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットへの招待リンクを変更する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+POST \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/link \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+need_acceptance
+=
+1
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した（招待リンクが公開されている）
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットへの招待リンクを変更する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/post-rooms-room_id-messages
+タイトル: チャットにメッセージを投稿する
+==================================================
+
+room_id
+integer
+required
+ルームID
+body
+string
+required
+length between 1 and 65535
+メッセージ本文
+self_unread
+integer
+Defaults to 0
+投稿するメッセージを自分から見て未読にするか。
+0
+を指定した場合（既定）は既読、
+1
+を指定した場合は未読にします。
+200
+成功した
+object
+message_id
+string
+required
+メッセージID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットにメッセージを投稿する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限およびチャット単位のメッセージ・タスク投稿回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+POST \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+self_unread
+=
+0
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットにメッセージを投稿する
+429 - APIの利用回数制限を超過した
+429 - チャット単位のメッセージ・タスク投稿回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/post-rooms-room_id-tasks
+タイトル: チャットにタスクを追加する
+==================================================
+
+room_id
+integer
+required
+ルームID
+body
+string
+required
+length ≤ 65535
+タスクの内容
+to_ids
+string
+required
+担当者にしたいアカウントの一覧。
+チャットに所属しているアカウントのIDをカンマ区切りで指定してください。
+limit
+integer
+タスクの期限。
+Unix時間（秒）で指定してください。
+limit_type
+string
+Defaults to time
+タスクの期限の種類
+Show Details
+none
+期限なし
+date
+日付
+time
+時間
+none
+date
+time
+200
+成功した
+object
+task_ids
+array of integers
+required
+task_ids
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットにタスクを追加する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限およびチャット単位のメッセージ・タスク投稿回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+POST \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/tasks \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+limit_type
+=
+time
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットにタスクを追加する
+403 - 担当者がチャットに所属していないタスクを追加する
+429 - APIの利用回数制限を超過した
+429 - チャット単位のメッセージ・タスク投稿回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-incoming_requests-request_id
+タイトル: コンタクト承認依頼を承認する
+==================================================
+
+request_id
+integer
+required
+リクエストID
+200
+成功した
+object
+account_id
+integer
+required
+アカウントID
+room_id
+integer
+required
+ダイレクトチャットのルームID
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足しているか不正な値が指定されている
+組織外アカウントとのコンタクト数が上限に達している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+コンタクト承認依頼が存在しない
+object
+errors
+array of strings
+required
+errors
+*
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/incoming_requests/request_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+400 - 組織外アカウントとのコンタクト数が上限に達している
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+404 - コンタクト承認依頼が存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-rooms-room_id
+タイトル: チャットの情報を変更する
+==================================================
+
+room_id
+integer
+required
+ルームID
+name
+string
+length between 1 and 255
+チャットの名前
+description
+string
+チャットの概要
+icon_preset
+string
+チャットのアイコンの種類
+meeting
+group
+check
+document
+meeting
+event
+project
+business
+study
+security
+star
+idea
+heart
+magcup
+beer
+music
+sports
+travel
+200
+成功した
+object
+room_id
+integer
+required
+変更したグループチャットのルームID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットの情報を更新する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットの情報を変更する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-rooms-room_id-link
+タイトル: チャットへの招待リンクを変更する
+==================================================
+
+room_id
+integer
+required
+ルームID
+code
+string
+length between 1 and 50
+招待リンクのコード部分。
+省略するとランダムな文字列となります。
+need_acceptance
+integer
+Defaults to 1
+参加に管理者の承認を必要とするか
+description
+string
+招待リンクの説明文
+200
+成功した
+object
+public
+boolean
+required
+招待リンクを公開するか
+url
+string
+招待リンクのURL
+need_acceptance
+boolean
+参加に管理者の承認を必要とするか
+description
+string
+招待リンクの説明文
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットへの招待リンクを変更する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/link \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+need_acceptance
+=
+1
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した（招待リンクが公開されている）
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットへの招待リンクを変更する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-rooms-room_id-members
+タイトル: チャットのメンバーを変更する
+==================================================
+
+room_id
+integer
+required
+ルームID
+members_admin_ids
+string
+required
+管理者権限にするメンバーの一覧。
+コンタクト済みもしくは組織内のアカウントのIDをカンマ区切りで指定してください。少なくとも1人以上のアカウントを指定する必要があります。
+members_member_ids
+string
+メンバー権限にするメンバーの一覧。
+コンタクト済みもしくは組織内のアカウントのIDをカンマ区切りで指定してください。
+members_readonly_ids
+string
+閲覧のみ権限にするメンバーの一覧。
+コンタクト済みもしくは組織内のアカウントのIDをカンマ区切りで指定してください。
+200
+成功した
+object
+admin
+array of integers
+required
+管理者権限のアカウントID一覧
+admin
+*
+member
+array of integers
+required
+メンバー権限のアカウントID一覧
+member
+*
+readonly
+array of integers
+required
+閲覧のみ権限のアカウントID一覧
+readonly
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメンバーを変更する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/members \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットのメンバーを変更する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-rooms-room_id-messages-message_id
+タイトル: チャットのメッセージを更新する
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+required
+メッセージID
+body
+string
+required
+length between 1 and 65535
+更新するメッセージ本文
+200
+成功した
+object
+message_id
+string
+required
+更新したメッセージのID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+メッセージを変更する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/message_id \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していない、または権限が不足しているチャットのメッセージを変更する
+403 - 自分以外が投稿したメッセージを変更する
+403 - システムメッセージを変更する
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated 6 months ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-rooms-room_id-messages-read
+タイトル: チャットのメッセージを既読にする
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+既読にするメッセージのID。
+ここで指定したIDまでのメッセージを既読にします。すでに既読になっている場合は400エラーを返します。
+200
+成功した
+object
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを既読/未読にする権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/read \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを既読/未読にする
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-rooms-room_id-messages-unread
+タイトル: チャットのメッセージを未読にする
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+required
+未読にするメッセージのID。
+ここで指定したID以降のメッセージを未読にします。すでに未読になっている場合は400エラーを返します。
+200
+成功した
+object
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを既読/未読にする権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/unread \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを既読/未読にする
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/put-rooms-room_id-tasks-task_id-status
+タイトル: チャットのタスクの完了状態を変更する
+==================================================
+
+room_id
+integer
+required
+ルームID
+task_id
+integer
+required
+タスクID
+body
+string
+required
+タスクの完了状態
+Show Details
+open
+未完了
+done
+完了
+open
+done
+200
+成功した
+object
+task_id
+string
+required
+完了状態を変更したタスクのID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのタスクの状態を変更する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+タスクが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/tasks/task_id/status \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+body
+=
+open
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのタスク、または自分が依頼者でも担当者でもないタスクの状態を変更する
+404 - タスクが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/rooms
+タイトル: チャット一覧を取得する
+==================================================
+
+200
+成功した
+array of objects
+object
+room_id
+integer
+required
+ルームID
+name
+string
+required
+length between 1 and 255
+チャットの名前
+type
+string
+required
+チャットの種類
+my
+direct
+group
+Show Details
+my
+マイチャット
+direct
+ダイレクトチャット
+group
+グループチャット
+role
+string
+required
+自分のチャットの権限
+admin
+member
+readonly
+Show Details
+admin
+管理者
+member
+メンバー
+readonly
+閲覧のみ
+sticky
+boolean
+required
+ピンで固定されているか
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+mytask_num
+integer
+required
+自分が担当者のタスクの数
+message_num
+integer
+required
+メッセージの数
+file_num
+integer
+required
+ファイルの数
+task_num
+integer
+required
+タスクの数
+icon_path
+string
+required
+チャットのアイコン画像URL
+last_update_time
+integer
+required
+チャットが最後に更新された時刻。Unix時間（秒）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+アクセストークンのスコープが不足している
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_id
+タイトル: チャットの情報を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+200
+成功した
+object
+room_id
+integer
+required
+ルームID
+name
+string
+required
+length between 1 and 255
+チャットの名前
+type
+string
+required
+チャットの種類
+my
+direct
+group
+Show Details
+my
+マイチャット
+direct
+ダイレクトチャット
+group
+グループチャット
+role
+string
+required
+自分のチャットの権限
+admin
+member
+readonly
+Show Details
+admin
+管理者
+member
+メンバー
+readonly
+閲覧のみ
+sticky
+boolean
+required
+ピンで固定されているか
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+mytask_num
+integer
+required
+自分が担当者のタスクの数
+message_num
+integer
+required
+メッセージの数
+file_num
+integer
+required
+ファイルの数
+task_num
+integer
+required
+タスクの数
+icon_path
+string
+required
+チャットのアイコン画像URL
+last_update_time
+integer
+required
+チャットが最後に更新された時刻。Unix時間（秒）
+description
+string
+required
+チャットの概要
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットの情報を取得する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idfiles
+タイトル: チャットのファイル一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+account_id
+integer
+アップロードしたアカウントのID
+200
+成功した
+array of objects
+object
+file_id
+integer
+required
+ファイルID
+account
+object
+required
+ファイルをアップロードしたアカウントの情報
+account object
+message_id
+string
+required
+メッセージID
+filename
+string
+required
+ファイルの名前
+filesize
+integer
+required
+ファイルサイズ
+upload_time
+integer
+required
+ファイルがアップロードされた時刻。Unix時間（秒）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+ファイルが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのファイルの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/files \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのファイルの情報を取得する
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idfilesfile_id
+タイトル: チャットのファイルの情報を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+file_id
+integer
+required
+ファイルID
+create_download_url
+integer
+Defaults to 0
+ダウンロードURLを作成するか。
+作成されるダウンロードURLは30秒間のみ有効です。
+200
+成功した
+object
+file_id
+integer
+required
+ファイルID
+account
+object
+required
+ファイルをアップロードしたアカウントの情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+message_id
+string
+required
+メッセージID
+filename
+string
+required
+ファイルの名前
+filesize
+integer
+required
+ファイルサイズ
+upload_time
+integer
+required
+ファイルがアップロードされた時刻。Unix時間（秒）
+download_url
+string
+ファイルのダウンロードURL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのファイルの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+ファイルが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+'https://api.chatwork.com/v2/rooms/room_id/files/file_id?create_download_url=0'
+\
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのファイルの情報を取得する
+404 - ファイルが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idlink
+タイトル: チャットへの招待リンクを取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+200
+成功した
+object
+public
+boolean
+required
+招待リンクを公開するか
+url
+string
+招待リンクのURL
+need_acceptance
+boolean
+参加に管理者の承認を必要とするか
+description
+string
+招待リンクの説明文
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/link \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した（招待リンクが公開されている）
+200 - 成功した（招待リンクが公開されていない）
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットの情報を取得する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idmembers
+タイトル: チャットのメンバー一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+200
+成功した
+array of objects
+object
+account_id
+integer
+required
+アカウントID
+role
+string
+required
+チャットの権限
+admin
+member
+readonly
+Show Details
+admin
+管理者
+member
+メンバー
+readonly
+閲覧のみ
+name
+string
+required
+表示名
+chatwork_id
+string
+required
+Chatwork ID
+organization_id
+integer
+required
+組織ID
+organization_name
+string
+required
+組織名
+department
+string
+required
+所属
+avatar_image_url
+string
+required
+アバター画像URL
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメンバー一覧を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/members \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメンバー一覧を取得する
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idmessages
+タイトル: チャットのメッセージ一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+force
+integer
+Defaults to 0
+強制的に最大件数まで取得するかどうか。
+0
+を指定した場合（既定）は前回取得分からの差分のみを返しますが、
+1
+を指定した場合は強制的に最新のメッセージを最大100件まで取得します。
+200
+成功した
+array of objects
+object
+message_id
+string
+required
+メッセージID
+account
+object
+required
+メッセージを投稿したアカウントの情報
+account object
+body
+string
+required
+length between 1 and 65535
+メッセージ本文
+send_time
+integer
+required
+メッセージが送信された時刻。Unix時間（秒）
+update_time
+integer
+required
+Defaults to 0
+メッセージが最後に更新された時刻。Unix時間（秒）
+object
+chatwork-message-limitation
+boolean
+メッセージの閲覧制限が適用されているかどうか。
+閲覧制限が適用されている場合は
+true
+になり、閲覧制限が適用されていない場合は省略されます。
+chatwork-message-limitation-summary
+string
+メッセージが閲覧制限されている理由。
+閲覧制限が適用されていない場合は省略されます。
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+メッセージが0件だった
+object
+chatwork-message-limitation
+boolean
+メッセージの閲覧制限が適用されているかどうか。
+閲覧制限が適用されている場合は
+true
+になり、閲覧制限が適用されていない場合は省略されます。
+chatwork-message-limitation-summary
+string
+メッセージが閲覧制限されている理由。
+閲覧制限が適用されていない場合は省略されます。
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+'https://api.chatwork.com/v2/rooms/room_id/messages?force=0'
+\
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを取得する
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idmessagesmessage_id
+タイトル: チャットのメッセージを取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+required
+メッセージID
+200
+成功した
+object
+message_id
+string
+required
+メッセージID
+account
+object
+required
+メッセージを投稿したアカウントの情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+body
+string
+required
+length between 1 and 65535
+メッセージ本文
+send_time
+integer
+required
+メッセージが送信された時刻。Unix時間（秒）
+update_time
+integer
+required
+Defaults to 0
+メッセージが最後に更新された時刻。Unix時間（秒）
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/message_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを取得する
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idmessagesread
+タイトル: チャットのメッセージを既読にする
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+既読にするメッセージのID。
+ここで指定したIDまでのメッセージを既読にします。すでに既読になっている場合は400エラーを返します。
+200
+成功した
+object
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを既読/未読にする権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/read \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを既読/未読にする
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idmessagesunread
+タイトル: チャットのメッセージを未読にする
+==================================================
+
+room_id
+integer
+required
+ルームID
+message_id
+string
+required
+未読にするメッセージのID。
+ここで指定したID以降のメッセージを未読にします。すでに未読になっている場合は400エラーを返します。
+200
+成功した
+object
+unread_num
+integer
+required
+未読数
+mention_num
+integer
+required
+自分宛ての未読の数
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのメッセージを既読/未読にする権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+メッセージが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/messages/unread \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのメッセージを既読/未読にする
+404 - メッセージが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idtasks
+タイトル: チャットのタスク一覧を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+account_id
+integer
+タスクの担当者のアカウントID
+assigned_by_account_id
+integer
+タスクの依頼者のアカウントID
+status
+string
+タスクの完了状態
+Show Details
+open
+未完了
+done
+完了
+open
+done
+200
+成功した
+array of objects
+object
+task_id
+integer
+required
+タスクID
+account
+object
+required
+タスクの担当者のアカウント情報
+account object
+assigned_by_account
+object
+required
+タスクの依頼者のアカウント情報
+account object
+message_id
+string
+required
+タスクのメッセージID
+body
+string
+required
+length ≤ 65535
+タスクの内容
+limit_time
+integer
+required
+Defaults to 0
+タスクの期限。Unix時間（秒）
+status
+string
+required
+タスクの完了状態
+open
+done
+Show Details
+open
+未完了
+done
+完了
+limit_type
+string
+required
+タスクの期限の種類
+none
+date
+time
+Show Details
+none
+期限なし
+date
+日付
+time
+時間
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+204
+タスクが0件だった
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのタスクの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/tasks \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのタスクの情報を取得する
+429 - APIの利用回数制限を超過した
+*/*
+204
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idtaskstask_id
+タイトル: チャットのタスクの情報を取得する
+==================================================
+
+room_id
+integer
+required
+ルームID
+task_id
+integer
+required
+タスクID
+200
+成功した
+object
+task_id
+integer
+required
+タスクID
+account
+object
+required
+タスクの担当者のアカウント情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+assigned_by_account
+object
+required
+タスクの依頼者のアカウント情報
+account_id
+integer
+required
+アカウントID
+name
+string
+required
+表示名
+avatar_image_url
+string
+required
+アバター画像URL
+message_id
+string
+required
+タスクのメッセージID
+body
+string
+required
+length ≤ 65535
+タスクの内容
+limit_time
+integer
+required
+Defaults to 0
+タスクの期限。Unix時間（秒）
+status
+string
+required
+タスクの完了状態
+open
+done
+Show Details
+open
+未完了
+done
+完了
+limit_type
+string
+required
+タスクの期限の種類
+none
+date
+time
+Show Details
+none
+期限なし
+date
+日付
+time
+時間
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのタスクの情報を取得する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+タスクが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+GET \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/tasks/task_id \
+3
+--header
+'accept: application/json'
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのタスクの情報を取得する
+404 - タスクが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
+
+
+==================================================
+URL: https://developer.chatwork.com/reference/roomsroom_idtaskstask_idstatus
+タイトル: チャットのタスクの完了状態を変更する
+==================================================
+
+room_id
+integer
+required
+ルームID
+task_id
+integer
+required
+タスクID
+body
+string
+required
+タスクの完了状態
+Show Details
+open
+未完了
+done
+完了
+open
+done
+200
+成功した
+object
+task_id
+string
+required
+完了状態を変更したタスクのID
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+400
+リクエストまたはアクセストークンのパラメーターが不足している、および不正な値が指定されている
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+401
+認証に失敗した
+object
+errors
+array of strings
+required
+errors
+*
+403
+チャットのタスクの状態を変更する権限がない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+404
+タスクが存在しない
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+429
+APIの利用回数制限を超過した
+object
+errors
+array of strings
+required
+errors
+*
+object
+x-ratelimit-limit
+integer
+一定期間におけるAPIの最大利用回数
+x-ratelimit-remaining
+integer
+一定期間におけるAPIの残り利用回数
+x-ratelimit-reset
+integer
+API利用回数制限が次にリセットされる時間。
+Unix時間（秒）で示されます。
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+Shell
+Node
+Ruby
+PHP
+Python
+xxxxxxxxxx
+1
+curl
+--request
+PUT \
+2
+--url
+https://api.chatwork.com/v2/rooms/room_id/tasks/task_id/status \
+3
+--header
+'accept: application/json'
+\
+4
+--header
+'content-type: application/x-www-form-urlencoded'
+\
+5
+--data
+body
+=
+open
+Click
+Try It!
+to start a request and see the response here! Or choose an example:
+application/json
+200 - 成功した
+400 - アクセストークンのパラメーターが不足している
+400 - リクエストのパラメーターが不足している
+400 - リクエストのパラメーターに不正な値が指定されている
+401 - 認証に失敗した
+403 - アクセストークンのスコープが不足している
+403 - 自分が所属していないチャットのタスク、または自分が依頼者でも担当者でもないタスクの状態を変更する
+404 - タスクが存在しない
+429 - APIの利用回数制限を超過した
+Updated over 1 year ago
+Did this page help you?
+Yes
+No
+
