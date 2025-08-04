@@ -1,0 +1,2784 @@
+NotebookLM用 複数サイト統合コンテンツ (パート 1/1)
+抽出日時: 2025-08-04 16:49:23
+総発見ページ数: 33ページ
+総取得ページ数: 33ページ
+このファイル: 33ページ (ページ1〜33)
+
+================================================================================
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/
+タイトル: Reference | cli-kintone
+==================================================
+
+Reference
+This section provides detailed reference documentation to deep dive into cli-kintone.
+info
+If you are just going to start using cli-kintone, please visit the
+Guide
+section first.
+
+
+
+==================================================
+URL: https://cli.kintone.dev/category/exporting-records/
+タイトル: Exporting records | cli-kintone
+==================================================
+
+ðï¸
+Delimiters
+When exporting records as CSV, line breaks and delimiters are as follows.
+ðï¸
+Character encoding
+Command-line interface
+ðï¸
+Errors and Warnings
+Errors
+ðï¸
+Field specifications
+3 items
+ðï¸
+Ordering fields
+Without specifying target fields
+ðï¸
+Specify target fields
+Command-line interface
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/delimiters/
+タイトル: Delimiters | cli-kintone
+==================================================
+
+Delimiters
+When exporting records as CSV, line breaks and delimiters are as follows.
+Type
+Value
+Record delimiter
+LF (
+\n
+)
+Line break inside a content
+LF (
+\n
+)
+Field delimiter
+Comma (
+,
+)
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/encoding/
+タイトル: Character encoding | cli-kintone
+==================================================
+
+On this page
+Character encoding
+Command-line interface
+â
+// Specify output character encoding
+cli-kintone record
+export
+--app
+8
+--encoding
+sjis
+Parameter name
+Short name
+Description
+--encoding
+Character encoding
+Character encoding
+â
+The
+--encoding
+option enables to select a character encoding of the output result. The following encodings are supports:
+Key
+Encode
+utf8
+UTF-8
+sjis
+Shift-JIS
+The default is
+utf8
+Errors
+â
+Specified unsupported encoding
+Command-line interface
+Character encoding
+Errors
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/errors-warnings/
+タイトル: Errors and Warnings | cli-kintone
+==================================================
+
+On this page
+Errors and Warnings
+Errors
+â
+(TBD)
+Warnings
+â
+A warning message will be shown if there is no record in the specified app.
+cli-kintone record
+export
+--base-url https://
+[
+your-domain
+]
+--username
+[
+your-user-name
+]
+--password
+[
+your-password
+]
+--app
+[
+APP_ID
+]
+[
+2023
+-09-06T08:54:24.140Z
+]
+WARN: The specified app does not have any records.
+Errors
+Warnings
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/fields/
+タイトル: Field specifications | cli-kintone
+==================================================
+
+On this page
+Field specifications
+Basically, the output is the same as the
+value
+property of the
+API response
+.
+Record information
+â
+Field type
+Output
+Record number
+Same as API response
+Record ID
+Not supported
+Revision
+Not supported
+Created by
+Same as API response
+Created datetime
+Same as API response
+Updated by
+Same as API response
+Updated datetime
+Same as API response
+General fields
+â
+Field type
+Output
+Text
+Same as API response
+Text area
+Same as API response
+Rich text
+Same as API response
+Number
+Same as API response
+Calculated
+Same as API response
+Check box
+Same as API response
+Radio button
+Same as API response
+Multi-choice
+Same as API response
+Drop-down
+Same as API response
+User selection
+User selection, Department selection, and Group selection
+Department selection
+User selection, Department selection, and Group selection
+Group selection
+User selection, Department selection, and Group selection
+Date
+YYYY-MM-DD
+e.g. 2022-04-01
+Time
+HH
+:MM
+e.g. 09:30
+Date and time
+YYYY-MM-DDTHH:MM
+:SSZ
+e.g. 2022-04-11T07:00Z
+Link
+Same as API response
+Attachment
+Attachment
+Lookup
+Not supported
+Table
+Table
+Related records
+Not supported
+Category
+Not supported
+Status
+Not supported
+Assignee
+Not supported
+Label
+Not supported
+Blank space
+Not supported
+Border
+Not supported
+Group
+Not supported
+Record information
+General fields
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/fields/attachment/
+タイトル: Attachment | cli-kintone
+==================================================
+
+On this page
+Attachment
+Command-line interface
+â
+cli-kintone record
+export
+--app
+8
+--attachment-dir ./attachments
+Parameter name
+Short name
+Description
+--attachments-dir
+The output directory where the download files saved on
+Downloading files
+â
+An example of the downloaded file and structure
+attachmentsDir
+âââ Portfolio-1
+âÂ Â  âââ Profile.pdf
+âââ Portfolio-15
+âÂ Â  âââ Portfolio.pdf
+âââ UserPhoto-1
+âÂ Â  âââ Photo1.png
+âÂ Â  âââ Photo2.png
+âââ UserPhoto-15
+âââ Photo1.png
+Path naming
+â
+The attachment field out of a table
+<attachment-dir>/<field code>-<record id>/<filename>
+The attachment field on a table
+<attachment-dir>/<the field code>-<record id>-<the index of the row on the table>/<filename>
+The flow of the conversion process for file names
+Replace prohibited characters (Windows only)
+Rename the duplicated file name
+Replace prohibited characters (Windows only)
+â
+If running on a Windows environment and the filename contains Windows-prohibited characters, replace them with
+_
+.
+Windows prohibited characters are
+< > : " / \ | ? *
+.
+Example:
+text<>.txt â text__.txt
+Rename the duplicated file name
+â
+When the attachment fields has same file names
+<filename> (<index>).<ext>
+Example:
+Portfolio.pdf
+Portfolio (1).pdf
+Portfolio (2).pdf
+Portfolio (3).pdf
+NOTE: The destination directory will be created automatically if it doesnât exist.
+File names on CSV file
+â
+An example of a CSV file that contains attachment files
+"Record_number"
+,
+"Created_by"
+,
+"Portfolio"
+,
+"UserPhoto"
+"1"
+,
+"tasshi"
+,
+"Portfolio-1/Profile.pdf"
+,
+"UserPhoto-1/Photo1.png
+UserPhoto-1/Photo2.png"
+"15"
+,
+"tasshi"
+,
+"Portfolio-15/Portfolio.pdf"
+,
+"UserPhoto-15/Photo1.png"
+The column has a name wich an attachment field code.
+The column has a value indicating the downloaded file path.
+The file path is a relative path of the --attachment-dir
+Multiple file names are separated by a new-line character (LF).
+Command-line interface
+Downloading files
+Path naming
+Replace prohibited characters (Windows only)
+Rename the duplicated file name
+File names on CSV file
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/fields/table/
+タイトル: Table | cli-kintone
+==================================================
+
+On this page
+Table
+CSV file format
+â
+CSV file example
+â
+"*"
+,
+"Text"
+,
+"Table"
+,
+"TextInTable"
+"*"
+,
+"first"
+,
+"<row id>"
+,
+"alice"
+,
+"first"
+,
+"<row id>"
+,
+"bob"
+*
+Text
+Table
+TextInTable
+*
+first
+<row id>
+alice
+first
+<row id>
+bob
+With multiple tables
+â
+"*"
+,
+"Text"
+,
+"Table"
+,
+"TextInTable"
+,
+"Table_1"
+,
+"NumberInTable"
+"*"
+,
+"first"
+,
+"<row id>"
+,
+"alice"
+,
+,
+,
+"first"
+,
+"<row id>"
+,
+"bob"
+,
+,
+,
+"first"
+,
+,
+,
+"<row id>"
+,
+"10"
+,
+"first"
+,
+,
+,
+"<row id>"
+,
+"20"
+*
+Text
+Table
+TextInTable
+Table_1
+NumberInTable
+*
+first
+<row id>
+alice
+first
+<row id>
+bob
+first
+<row id>
+10
+first
+<row id>
+20
+Specification
+â
+The row where a record begins has a PRIMARY*MARK(
+*
+) on the â*â field.
+The data of fields outside the Table are repeated in all rows.
+The data of fields inside the Table are specified with one or multiple rows
+Each row contains data for one table only
+CSV file format
+CSV file example
+With multiple tables
+Specification
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/fields/user-group-org-selection/
+タイトル: User selection, Department selection, and Group selection | cli-kintone
+==================================================
+
+On this page
+User selection, Department selection, and Group selection
+CSV file format
+â
+CSV file example
+â
+"Record_number"
+,
+"User_selection"
+,
+"Group_selection"
+,
+"Department_selection"
+"2"
+,
+"user01
+user02
+user03"
+,
+"Dev team1
+Dev team2"
+,
+"Develepment dept.
+Sales dept."
+"1"
+,
+"user02"
+,
+"Dev team1"
+,
+"Sales dept."
+User selection field
+â
+The column name is equal to the code of user selection field.
+The column contains login names of selected user(s).
+Multi users represented by separating a new-line character(LF).
+Group selection field
+â
+The column name is equal to the code of group selection field.
+The column contains group code(s).
+Multi groups are represented by separating a new-line character(LF).
+Department selection field
+â
+The column name is equal to the code of department selection field.
+The column contains department code(s).
+Multi departments are represented by separating a new-line character(LF).
+CSV file format
+CSV file example
+User selection field
+Group selection field
+Department selection field
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/fields-order/
+タイトル: Ordering fields | cli-kintone
+==================================================
+
+On this page
+Ordering fields
+Without specifying target fields
+â
+When not specifying the target fields, the column order will be followed by
+kintone form layout
+.
+For example, the app has the following form layout:
+[Record_number]
+[Created_datetime] [Updated_datetime]
+[Created_by] [Updated_by]
+[Text] [Number]
+[Text_area]
+==> The column has the following order
+cli-kintone record
+export
+--app
+27
+"Record_number"
+,
+"Created_datetime"
+,
+"Updated_datetime"
+,
+"Created_by"
+,
+"Updated_by"
+,
+"Text"
+,
+"Number"
+,
+"Text_area"
+"1"
+,
+"2022-08-12T07:15:00Z"
+,
+"2022-08-12T07:15:00Z"
+,
+"user01"
+,
+"user01"
+,
+"hello"
+,
+"1"
+,
+"content"
+"2"
+,
+"2022-08-12T07:15:00Z"
+,
+"2022-08-12T07:15:00Z"
+,
+"user01"
+,
+"user01"
+,
+"goodbye"
+,
+"2"
+,
+"body"
+Specifies fields
+â
+When specifying the target fields, the column order will be the same as the order of user specifies.
+For example, the app has the following form layout:
+[Record_number]
+[Created_datetime] [Updated_datetime]
+[Created_by] [Updated_by]
+[Text] [Number]
+[Text_area]
+==> The column has the following order
+cli-kintone record
+export
+--app
+27
+--fields
+Record_number,Number,Text_area,Text
+"Record_number"
+,
+"Number"
+,
+"Text_area"
+,
+"Text"
+"1"
+,
+"1"
+,
+"content"
+,
+"hello"
+"2"
+,
+"2"
+,
+"body"
+,
+"goodbye"
+Specifies a table field
+â
+When specifying the target fields, and containing the âTableâ field, the order of the tableâs fields will be followed by
+kintone form layout
+.
+For example, the app has the following form layout:
+[Record_number]
+[Name] [Class]
+[Learning_score] *Learning_score is a Table file*
+[Subject] [Score]
+==> The column has the following order
+cli-kintone record
+export
+--app
+29
+--fields
+Record_number,Name,Class,Learning_score
+"*"
+,
+"Record_number"
+,
+"Name"
+,
+"Class"
+,
+"Learning_score"
+,
+"Subject"
+,
+"Score"
+"*"
+,
+"1"
+,
+"user01"
+,
+"SP01"
+,
+"53783"
+,
+"Math"
+,
+"A"
+,
+"1"
+,
+"user01"
+,
+"SP01"
+,
+"53783"
+,
+"Chemistry"
+,
+"B"
+"*"
+,
+"2"
+,
+"user02"
+,
+"SP01"
+,
+"53783"
+,
+"Math"
+,
+"B"
+,
+"2"
+,
+"user02"
+,
+"SP01"
+,
+"53783"
+,
+"Chemistry"
+,
+"A"
+Without specifying target fields
+Specifies fields
+Specifies a table field
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-export/target-fields/
+タイトル: Specify target fields | cli-kintone
+==================================================
+
+On this page
+Specify target fields
+Command-line interface
+â
+cli-kintone record
+export
+--app
+8
+--fields
+'Number,Text,'
+Parameter name
+Short name
+Description
+--fields
+Comma-separated field codes to be exported
+Target fields variation
+â
+Without specifying target fields
+â
+All fields are exported
+cli-kintone record
+export
+--app
+27
+"*"
+,
+"Record_number"
+,
+"Number"
+,
+"Table"
+,
+"Number_0"
+,
+"Number_1"
+,
+"Table_0"
+,
+"Number_2"
+,
+"Number_3"
+,
+"Created_by"
+,
+"Created_datetime"
+,
+"Updated_by"
+,
+"Updated_datetime"
+"*"
+,
+"1"
+,
+"1"
+,
+"53783"
+,
+"2"
+,
+"3"
+,,,,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"1"
+,
+"1"
+,
+"53785"
+,
+"2"
+,
+"3"
+,,,,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+","
+1
+","
+1
+",,,,"
+53784
+","
+4
+","
+5
+","
+user01
+","
+2022
+-08-12T07:15:00Z
+","
+user01
+","
+2022
+-08-12T07:15:00Z
+","
+1
+","
+1
+",,,,"
+53786
+","
+4
+","
+5
+","
+user01
+","
+2022
+-08-12T07:15:00Z
+","
+user01
+","
+2022
+-08-12T07:15:00Z
+"*"
+,
+"2"
+,
+"1"
+,
+"53788"
+,
+"2"
+,
+"3"
+,,,,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"2"
+,
+"1"
+,
+"53789"
+,
+"2"
+,
+"3"
+,,,,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"2"
+,
+"1"
+,,,,
+"53790"
+,
+"4"
+,
+"5"
+,
+"user01"
+,
+"2022-08-12T07:15:00Z"
+,
+"user01"
+,
+"2022-08-12T07:15:00Z
+,"
+2
+","
+1
+",,,,"
+53791
+","
+4
+","
+5
+","
+user01
+","
+2022
+-08-12T07:15:00Z
+","
+user01
+","
+2022
+-08-12T07:15:00Z
+Specifies fields
+â
+The specified fields are exported. The PRIMARY_MARK (*) does not appear when the specified fields do not contain a table, even if the app has the table.
+cli-kintone record
+export
+--app
+27
+--fields
+Record_number,Number
+"Record_number"
+,
+"Number"
+"1"
+,
+"1"
+"2"
+,
+"1"
+Specifies a table field
+â
+The specified fields with every rows on the table are exported.
+cli-kintone record
+export
+--app
+27
+--fields
+Table
+"*"
+,
+"Table"
+,
+"Number_0"
+,
+"Number_1"
+"*"
+,
+"53783"
+,
+"2"
+,
+"3"
+,
+"53785"
+,
+"2"
+,
+"3"
+"*"
+,
+"53788"
+,
+"2"
+,
+"3"
+,
+"53789"
+,
+"2"
+,
+"3"
+Errors
+â
+Specified a fields on the table
+â
+cli-kintone record
+export
+--app
+27
+--fields
+Number_0
+Error: The specified field
+"Number_0"
+in
+a table cannot be specified to fields option
+Specified PRIMARY_MARK(
+*
+)
+â
+cli-kintone record
+export
+--app
+27
+--fields
+'*'
+Error: The specified field
+"*"
+does not exist on the app
+Specified a fields which does not exist
+â
+cli-kintone record
+export
+--app
+27
+--fields
+Rich_textan
+Error: The specified field
+"Rich_textan"
+does not exist on the app
+Command-line interface
+Target fields variation
+Without specifying target fields
+Specifies fields
+Specifies a table field
+Errors
+
+
+
+==================================================
+URL: https://cli.kintone.dev/category/importing-records/
+タイトル: Importing records | cli-kintone
+==================================================
+
+ðï¸
+Delimiters
+When importing records from CSV, line breaks and delimiters are as follows.
+ðï¸
+Character encoding
+Command-line interface
+ðï¸
+Errors and Warnings
+Errors
+ðï¸
+Field specifications
+3 items
+ðï¸
+Specify target fields
+Command-line interface
+ðï¸
+UPSERT: update or insert records
+Concept
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/delimiters/
+タイトル: Delimiters | cli-kintone
+==================================================
+
+Delimiters
+When importing records from CSV, line breaks and delimiters are as follows.
+Type
+Value
+Record delimiter
+Auto discovered *1
+Line break inside a content
+LF (
+\n
+)
+Field delimiter
+Comma (
+,
+)
+*1: Select the appropriate one from CRLF, LF, and CR automatically.
+An error will occur if multiple types of line breaks are used.
+We use the function of the csv-parse library for auto discovering.
+https://csv.js.org/parse/options/record_delimiter/
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/encoding/
+タイトル: Character encoding | cli-kintone
+==================================================
+
+On this page
+Character encoding
+Command-line interface
+â
+// specify a character encoding
+cli-kintone record
+import
+--app
+8
+--file-path records.csv
+--encoding
+sjis
+Parameter name
+Short name
+Description
+--encoding
+Character-set encoding for input file
+Specify a character encoding
+â
+The
+--encoding
+option allows to specify a character encoding on importing CSV files. The following encodings are available:
+Key
+Encode
+utf8
+UTF-8
+sjis
+Shift-JIS
+The default is
+utf8
+Errors
+â
+Specified unsupported encoding
+Mismatch encoding
+Command-line interface
+Specify a character encoding
+Errors
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/errors-warnings/
+タイトル: Errors and Warnings | cli-kintone
+==================================================
+
+On this page
+Errors and Warnings
+Errors
+â
+When an error occurs during record import, the below error will be thrown.
+Error format:
+An error occurred on <field Code> at row <line of CSV>.
+Cause: <error message>
+Example:
+An error occurred on phone_number at row 2.
+Cause: Only numbers are allowed.
+Below are the study cases of the error message
+One error occurred in a record
+â
+ERROR: [400] [CB_VA01] å¥ååå®¹ãæ­£ããããã¾ããã (4Ax9owcXS1e8aYjRcRn8)
+ERROR:   An error occurred on surname at row 2.
+ERROR:     Cause: å¿é ã§ãã
+Two different type of errors occurred in a record
+â
+ERROR: [400] [CB_VA01] å¥ååå®¹ãæ­£ããããã¾ããã (Vq2An4rki9tKh84yppfD)
+ERROR:   An error occurred on surname at row 2.
+ERROR:     Cause: å¿é ã§ãã
+ERROR:   An error occurred on Number at row 3.
+ERROR:     Cause: æ°å­ã§ãªããã°ãªãã¾ããã
+Two same-type errors occurred in a record
+â
+ERROR: [400] [CB_VA01] å¥ååå®¹ãæ­£ããããã¾ããã (IWeQPfaRHsEJdAS4TOZq)
+ERROR:   An error occurred on surname at row 2.
+ERROR:     Cause: å¿é ã§ãã
+ERROR:   An error occurred on lastname at row 2.
+ERROR:     Cause: å¿é ã§ãã
+Two different type and two same-type of errors occurred in a record
+â
+ERROR: [400] [CB_VA01] å¥ååå®¹ãæ­£ããããã¾ããã (rgm6XXy1jItFPc3ndMep)
+ERROR:   An error occurred on surname at row 2.
+ERROR:     Cause: å¿é ã§ãã
+ERROR:   An error occurred on lastname at row 2.
+ERROR:     Cause: å¿é ã§ãã
+ERROR:   An error occurred on Number at row 3.
+ERROR:     Cause: æ°å­ã§ãªããã°ãªãã¾ããã
+Warnings
+â
+(TBD)
+Errors
+One error occurred in a record
+Two different type of errors occurred in a record
+Two same-type errors occurred in a record
+Two different type and two same-type of errors occurred in a record
+Warnings
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/fields/
+タイトル: Field specifications | cli-kintone
+==================================================
+
+On this page
+Field specifications
+Basically, the input should be the same as the
+value
+property of the
+API request
+.
+Record information
+â
+Field type
+Input
+Record number
+Same as API request
+Record ID
+Not supported
+Revision
+Not supported
+Created by
+Same as API request
+Created datetime
+Same as API request
+Updated by
+Same as API request
+Updated datetime
+Same as API request
+General fields
+â
+Field type
+Input
+Text
+Same as API request
+Text area
+Same as API request
+Rich text
+Same as API request
+Number
+Same as API request
+Calculated
+Same as API request
+Check box
+Same as API request
+Radio button
+Same as API request
+Multi-choice
+Same as API request
+Drop-down
+Same as API request
+User selection
+User selection, Department selection, and Group selection
+Department selection
+User selection, Department selection, and Group selection
+Group selection
+User selection, Department selection, and Group selection
+Date
+YYYY-MM-DD
+e.g.
+2022-04-01
+Time
+HH:MM
+e.g.
+09:30
+Date and time
+-
+YYYY-MM-DDTHH:MM:SSÂ±HH:MM
+-
+YYYY-MM-DDTHH:MM:SSZ
+e.g.
+2022-04-11T07:00Z
+Link
+Same as API request
+Attachment
+Attachment
+Lookup
+Not supported
+Table
+Table
+Related records
+Not supported
+Category
+Not supported
+Status
+Not supported
+Assignee
+Not supported
+Label
+Not supported
+Blank space
+Not supported
+Border
+Not supported
+Group
+Not supported
+How cli-kintone chooses the field to read from the CSV file
+â
+When running the import command
+Without the
+--fields
+option:
+All fields in the CSV file that exist on the Kintone app will be imported.
+With the
+--fields
+option:
+See the
+Specify target fields
+page.
+How cli-kintone treats missing field/empty string in CSV
+â
+If the field is missing on the header of the CSV file => cli-kintone will ignore that field.
+If the field value in the row is an empty string => cli-kintone will add/update that field with an empty string.
+Record information
+General fields
+How cli-kintone chooses the field to read from the CSV file
+How cli-kintone treats missing field/empty string in CSV
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/fields/attachment/
+タイトル: Attachment | cli-kintone
+==================================================
+
+On this page
+Attachment
+Command-line interface
+â
+cli-kintone record
+import
+--app
+8
+--file-path records.csv --attachment-dir ./attachments
+Parameter name
+Short name
+Description
+--attachments-dir
+A directory name containing attachments to be uploaded
+Behavior
+â
+An example CSV file contains attachments
+"Record_number"
+,
+"Created_by"
+,
+"Portfolio"
+,
+"UserPhoto"
+"1"
+,
+"tasshi"
+,
+"Portfolio-1/Resume.pdf"
+,
+"UserPhoto-1/Photo1.png
+UserPhoto-1/Photo2.png"
+"15"
+,
+"tasshi"
+,
+"Portfolio-15/Profile.pdf"
+,
+"UserPhoto-15/Photo1.png"
+A relative path of the
+--attachments-dir
+Multiple values are separated by a new-line character (LF)
+The file specified by the value is uploaded
+The attached file has a name that equals the local one.
+Upload procedure
+â
+Uploading files are processed on each record chunks
+Uploading files are performed before updating records
+An error occurs when the imported fields have an attachment field, but the
+--attachments-dir
+is not specified.
+Importing records aborts when the uploading files fail. Examples of uploading failure:
+The file does not exist
+The file size is over 1 GB (
+Field Entry Limits
+)
+Command-line interface
+Behavior
+Upload procedure
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/fields/table/
+タイトル: Table | cli-kintone
+==================================================
+
+On this page
+Table
+CSV file format
+â
+CSV file example
+â
+"*"
+,
+"Text"
+,
+"Table"
+,
+"TextInTable"
+"*"
+,
+"first"
+,
+"<row id>"
+,
+"alice"
+,
+"first"
+,
+"<row id>"
+,
+"bob"
+*
+Text
+Table
+TextInTable
+*
+first
+<row id>
+alice
+first
+<row id>
+bob
+With multiple tables
+â
+"*"
+,
+"Text"
+,
+"Table"
+,
+"TextInTable"
+,
+"Table_1"
+,
+"NumberInTable"
+"*"
+,
+"first"
+,
+"<row id>"
+,
+"alice"
+,
+,
+,
+"first"
+,
+"<row id>"
+,
+"bob"
+,
+,
+,
+"first"
+,
+,
+,
+"<row id>"
+,
+"10"
+,
+"first"
+,
+,
+,
+"<row id>"
+,
+"20"
+*
+Text
+Table
+TextInTable
+Table_1
+NumberInTable
+*
+first
+<row id>
+alice
+first
+<row id>
+bob
+first
+<row id>
+10
+first
+<row id>
+20
+Specification
+â
+The row where a record begins should have a PRIMARY_MARK(
+*
+) on the â*â field.
+The data of fields outside the Table should be specified in the row with PRIMARY_MARK(
+*
+)
+The data of fields outside the Table in other rows will be ignored.
+For example:
+"*"
+,
+"Text"
+,
+"Number"
+,
+"Table"
+,
+"TextInTable"
+"*"
+,
+"first"
+,
+"10"
+,
+"<row id>"
+,
+"alice"
+,
+"second"
+,
+"20"
+,
+"<row id>"
+,
+"bob"
+==> The record will be imported as follows:
+Text:
+first
+Number:
+10
+TextInTable:
+[ alice , bob ]
+Rows in the Table
+â
+The data of fields inside the Table should be specified with one or multiple rows.
+If the row has a
+<row_id>
+and without fields in the Table, an empty row will be imported.
+If the row has an empty
+<row_id>
+If all fields in the table are empty, the row is ignored.
+If fields in the table have valid values, the row is added.
+For
+upserting
+, if the record has already existed, the imported rows are dependent on the
+<row_id>
+If
+<row_id>
+on the CSV file exists on the record, update the row.
+If
+<row_id>
+on the CSV file does not exist on the record, insert a new row.
+The rows on the record that are not specified in the CSV file will be deleted.
+For example, if the Table has five rows on kintone record, and the CSV has only three existing rows.
+â After upserting, the Table remains only three rows. Two other rows will be deleted.
+How cli-kintone treats missing field/empty string in row
+â
+When running the import command without the
+--fields
+option:
+If the field inside the Table is missing on the CSV header => cli-kintone will ignore that field.
+If the field inside the Table value in the row is an empty string => cli-kintone will add/update that field with an empty string.
+With the
+--fields
+option and the specified field is a Table field
+If the
+<row_id>
+in the row is an empty string => cli-kintone will throw an error.
+If the field inside the Table is missing on the CSV header => cli-kintone will throw an error.
+If the field inside the Table value in the row is an empty string => cli-kintone will add/update that field with an empty string.
+For the field outside the Table, refer to
+Fields
+.
+Errors
+â
+Cause
+Message
+If
+<row_id>
+on the CSV file is duplicated
+[520] [GAIA_SI01] Raw ID (code: Table) in a table is duplicated.
+If
+<row_id>
+on the CSV file is a string, not a number
+[400] [CB_IJ01] Invalid JSON string.
+When running the import command with the
+--fields
+Table option and the field inside the table is missing on the CSV header.
+Error: The specified field "<<missing_field>>" does not exist on the CSV
+When running the import command with the
+--fields
+Table option and the
+<row_id>
+in the row is an empty string
+Error: The specified field "Table" does not exist on the CSV
+CSV file format
+CSV file example
+With multiple tables
+Specification
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/fields/user-group-org-selection/
+タイトル: User selection, Department selection, and Group selection | cli-kintone
+==================================================
+
+On this page
+User selection, Department selection, and Group selection
+CSV file format
+â
+CSV file example
+â
+"Record_number"
+,
+"User_selection"
+,
+"Group_selection"
+,
+"Department_selection"
+"2"
+,
+"user01
+user02
+user03"
+,
+"Dev team1
+Dev team2"
+,
+"Develepment dept.
+Sales dept."
+"1"
+,
+"user02"
+,
+"Dev team1"
+,
+"Sales dept."
+User selection field
+â
+The column name should have a name which equals to the field code of the user selection field.
+The column should contains user's login name(s).
+Multi user names should be separated by a new-line character (LF)
+Group selection field
+â
+The column name should have a name which equals to the field code of the group selection field.
+The column should group code(s).
+Multi groups should be separated by a new-line character (LF)
+Department selection field
+â
+The column name should have a name which equals to the field code of the department selection field.
+The column should department code(s).
+Multi departments should be separated by a new-line character (LF)
+CSV file format
+CSV file example
+User selection field
+Group selection field
+Department selection field
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/target-fields/
+タイトル: Specify target fields | cli-kintone
+==================================================
+
+On this page
+Specify target fields
+Command-line interface
+â
+cli-kintone record
+import
+--app
+8
+--file-path records.csv
+--fields
+'Number,Text'
+Parameter name
+Short name
+Description
+--fields
+Comma-separated field codes to be imported
+info
+When specifying
+--fields
+option, It will change the field's behavior described at:
+Fields
+.
+Please check the below section for more details.
+Target fields variation
+â
+Specify target fields
+â
+Only specified fields are imported
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+"Record_number,Text"
+Specify a table field
+â
+All fields on the table are imported
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+Table
+The target fields do not include the update key
+â
+The update key is appended to target fields automatically
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+\
+--update-key UniqueText
+\
+--fields
+Number
+# The UniqueText field is appended to the target fields, and import is finished successfully
+--field option, kintone filed code, and CSV columns
+â
+--field parameter
+Fields codes on the kintone app
+Column names on the CSV
+The expectation
+A, B
+A, B
+A, B
+Import A and B
+A, B
+A
+A
+An error occurs, because the kintone app have a field A and the CSV file does not have a column B
+A, B
+A, B
+A
+An error occues, because the CSV files does not have a column B
+A, B
+A
+A, B
+An error occues, because the kintone app does not have the field B
+A
+A, B
+A
+Import A
+A
+A
+A, B
+Import A
+A
+B
+B
+An error occurs, because the kintone app have the field B and the CSV file does not have a column A
+not specified
+A, B
+A, B
+Import A and B
+not specified
+A
+A, B
+Import A
+Errors
+â
+Specified the field inside the table
+â
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+textInTable
+Error: The specified field
+"textInTable"
+in
+a table cannot be specified to fields option
+Specified the Table field with empty values
+â
+# records.csv as below
+# "*","Text_0","Table","Text","Number"
+# "*","Alice",,,
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+Table
+Error: The specified field
+"Table"
+does not exist on the CSV
+Specified PRIMARY_MARK(
+*
+)
+â
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+'*'
+Error:The specified field
+"*"
+does not exist on the app
+Specified the field that does not exist on the Kintone app
+â
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+KintoneHyperField
+Error:The specified field
+"KintoneHyperField"
+does not exist on the app
+Specified unsupported field
+â
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+Category
+Error:The specified field
+"Category"
+is not supported
+Specified the field that does not exist on the CSV file
+â
+# records.csv does not have Text column
+cli-kintone record
+import
+--app
+27
+--file-path records.csv
+--fields
+Text,Number
+Error: The specified field
+"Text"
+does not exist on the CSV
+Command-line interface
+Target fields variation
+Specify target fields
+Specify a table field
+The target fields do not include the update key
+--field option, kintone filed code, and CSV columns
+Errors
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-import/upsert/
+タイトル: UPSERT: update or insert records | cli-kintone
+==================================================
+
+On this page
+UPSERT: update or insert records
+Concept
+â
+Term
+Description
+Update key
+The field code binds the imported record and the record on the kintone. The following fields are supported:
+- Record number field
+- The following fields with "Prohibit duplicate values"
+- Single-line text
+- Number field
+Upsert
+Update the record if the record matching the update key exists. Otherwise, add a new record.
+Command-line interface
+â
+// Specify update key
+cli-kintone record
+import
+--app
+8
+--file-path records.csv --update-key companyName
+Parameter name
+Short name
+Description
+--update-key
+An updatekey
+Upserting records
+â
+Users can specify an update key by
+--update-key
+option.
+The tool looks up the matching records and performs the following:
+Update the record if the matching record exists
+Add a new record if no matching records exist
+Updating and updating perform in the sequence of the CSV order.
+A Record Number field is only evaluated for records to be updated when it is specified as "Key to Bulk Update".
+The following fields in records to be updated are ignored.
+Created by
+Created datetime
+Updated by
+Updated datetime
+An error occurs when the update key has the following condition
+The key does not exist on the CSV file.
+The fields are not configured as âProhibit duplicate valuesâ
+Specifying record number field
+â
+The record number column can contain the app code, such as Task-1. Every row should contain the same app code.
+The app code is equal to the kintone app's one.
+Errors
+â
+The field specified by the update key does not exist on the kintone app.
+The field specified by the update key is not supported; neither is a single-line text or a number field.
+The field specified by the update key is supported, but it does not have a setting "Prohibit duplicate values".
+When the update key is a record number field, record numbers are mixed, containing or not the app code.
+When the update key is a record number field, record numbers contain the app code other than kintone app's one.
+The field specified by the update key does not exists on the source file.
+Concept
+Command-line interface
+Upserting records
+Specifying record number field
+Errors
+
+
+
+==================================================
+URL: https://cli.kintone.dev/category/deleting-records/
+タイトル: Deleting records | cli-kintone
+==================================================
+
+ðï¸
+Deleting all records
+Details
+ðï¸
+Deleting specified records
+Details
+ðï¸
+Character encoding
+Command-line interface
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-delete/delete-all-records/
+タイトル: Deleting all records | cli-kintone
+==================================================
+
+On this page
+Deleting all records
+Details
+â
+The
+delete
+command allows you to delete all permitted records of a specified kintone app.
+Command-line interface:
+cli-kintone record delete --base-url https://
+${yourDomain}
+--api-token
+${apiToken}
+--app
+${kintoneAppId}
+Currently, this command only supports API Token.
+Why?
+This is because making password authentication available would significantly complicate the specification and implementation or degrade performance.
+To check whether a user has record deletion permissions, we need to call the
+Evaluate Record Permissions
+API.
+This API can only evaluate 100 record per request.
+On the other hand, if we perform record deletion without evaluation, we need to consider a complex retry process.
+If the user specifies username or password via the command option or ENV variable without api-token, an error will be thrown.
+ERROR: The delete
+command
+only supports API token authentication
+detailed cases
+username: set by option or ENV or none
+password: set by option or ENV or none
+api-token: set by option or ENV
+=> Do not throw the error message
+username: set by option or ENV
+password: set by option or ENV
+api-token: none
+=> throw the error message
+username: set by option or ENV
+password: none
+api-token: none
+=> throw the error message
+username: none
+password: set by option or ENV
+api-token: none
+=> throw the error message
+Before the command is executed, the user must confirm the action by answering the prompt yes/no.
+cli-kintone record delete --base-url https://
+${yourDomain}
+--api-token
+${apiToken}
+--app
+${kintoneAppId}
+>
+Are you sure want to delete records?
+(
+y/N
+)
+Notes:
+The confirmation message is in English only for now.
+If not specifying the answer, the default answer is No.
+Or, the user can specify the option
+--yes
+or
+-y
+to execute the command without prompt.
+cli-kintone record delete
+--yes
+--base-url https://
+${yourDomain}
+--api-token
+${apiToken}
+--app
+${kintoneAppId}
+Once the command is executed successfully, the below message will be shown.
+INFO: Starting to delete all records
+..
+.
+INFO:
+2
+records are deleted successfully
+If there is no record in the specified app, a warning message will be shown.
+INFO: Starting to delete all records
+..
+.
+WARN: The specified app does not have any records.
+If the API Token does not have the delete permission, an error will be shown. Ref to
+Errors
+section.
+Implementation
+â
+The delete all records command is now using some APIs of
+rest-api-cilent
+getAllRecordsWithId
+: this method is used to get the ID of all records
+deleteAllRecords
+: this method is used to delete all records
+The API
+deleteAllRecords
+split the records into chunks of 2000 records and process each chunk sequentially. Therefore, the rollback can be performed on each chunk of 2000 records.
+Errors
+â
+An error occurs while deleting all records
+â
+When an error occurs while deleting all records, the process will stop at the current chunk. For example:
+Assume that there are 10.000 records on the app and an error will happen at the index 2022th.
+The following behavior will occur:
+==>
+Records 1st â 2000th are deleted successfully
+Records 2001th â 10.000th are NOT deleted
+An error message is thrown
+Process is stopped
+The format of the output when an error occurs
+â
+ERROR: Failed to delete all records.
+ERROR: number_of_success/number_of_total records are deleted successfully.
+ERROR: An error occurred
+while
+processing records.
+ERROR:
+[
+error_status
+]
+[
+error_code
+]
+error_message
+(
+error_id
+)
+For example:
+ERROR: Failed to delete all records.
+ERROR:
+2000
+/6000 records are deleted.
+ERROR:An error occurred
+while
+processing records.
+ERROR:
+[
+404
+]
+[
+GAIA_RE01
+]
+The specified record
+(
+ID:
+1054447
+)
+is not found.
+(
+v7jzg2VeSHu8biwO9jZ6
+)
+Using API Token which does not have the delete permission
+â
+If the user uses API Tokens and that token does not have the delete permission, the below error will be shown.
+ERROR: Failed to delete all records.
+ERROR: No records are deleted.
+ERROR: An error occurred
+while
+processing records.
+ERROR:
+[
+403
+]
+[
+GAIA_NO01
+]
+ãã®APIãã¼ã¯ã³ã§ã¯ãæå®ããAPIãå®è¡ã§ãã¾ããã
+(
+IY3EH6WWAPEX6KcyE5Qd
+)
+Details
+Implementation
+Errors
+An error occurs while deleting all records
+Using API Token which does not have the delete permission
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-delete/delete-specified-records/
+タイトル: Deleting specified records | cli-kintone
+==================================================
+
+On this page
+Deleting specified records
+Details
+â
+By specifying the option
+--file-path
+, the
+delete
+command allows users to delete records from a CSV file.
+Command-line interface:
+cli-kintone record delete --api-token
+<
+API_Token
+>
+--file-path
+<
+path_of_csv_file
+>
+Example:
+cli-kintone record delete --api-token
+<
+API_Token
+>
+--file-path records_need_to_be_deleted.csv
+Currently, this command only supports API Token.
+Why?
+This is because making password authentication available would significantly complicate the specification and implementation or degrade performance.
+To check whether a user has record deletion permissions, we need to call the
+Evaluate Record Permissions
+API.
+This API can only evaluate 100 record per request.
+On the other hand, if we perform record deletion without evaluation, we need to consider a complex retry process.
+The CSV file must contain the record number column.
+And, the header row of the record number column must be the record number field code which is defined in the kintone site. For example:
+The record number field code in kintone:
+Record_number
+The content of the CSV file:
+*
+,
+"Record_number"
+,
+"Text"
+,
+"Table"
+,
+"Table_Text"
+,
+"Table_Number"
+*
+,
+"1"
+,
+"sample1"
+,
+"<row_id>"
+,
+"foo"
+,
+"4"
+,
+"1"
+,
+"sample1"
+,
+"<row_id>"
+,
+"bar"
+,
+"5"
+*
+,
+"2"
+,
+"sample2"
+,
+"<row_id>"
+,
+"hoge"
+,
+"6"
+The value of the record number column can be either the record number or the app code. For example:
+*
+,
+"Record_number"
+,
+"Text"
+,
+"Table"
+,
+"Table_Text"
+,
+"Table_Number"
+*
+,
+"myapp-1"
+,
+"sample1"
+,
+"<row_id>"
+,
+"foo"
+,
+"4"
+,
+"myapp-1"
+,
+"sample1"
+,
+"<row_id>"
+,
+"bar"
+,
+"5"
+*
+,
+"myapp-2"
+,
+"sample2"
+,
+"<row_id>"
+,
+"hoge"
+,
+"6"
+If using the app code, every row should contain the same app code (not mix) and the app code is equal to the kintone app's one.
+The user also can specify the encoding of the CSV file. Supported character encodings:
+utf8
+,
+sjis
+.
+Before the command is executed, the user must confirm the action by answering the prompt yes/no.
+cli-kintone record delete
+--app
+${kintoneAppId}
+--file-path
+${pathToCsvFile}
+>
+Are you sure want to delete records?
+(
+y/N
+)
+Notes:
+The confirmation message is in English only for now.
+If not specifying the answer, the default answer is No.
+Or, the user can specify the option
+--yes
+or
+-y
+to execute the command without a prompt.
+cli-kintone record delete
+--yes
+--app
+${kintoneAppId}
+--file-path
+${pathToCsvFile}
+Once the command is executed successfully, the below message will be shown.
+INFO: Starting to delete records
+..
+.
+INFO:
+<
+number_of_deleted_records
+>
+records are deleted successfully
+Valid cases
+â
+valid record number value
+â
+Example input
+â
+Record_number
+1
+2
+3
+or
+Record_number
+appcode-1
+appcode-2
+appcode-3
+Expected result
+â
+All records [1, 2, 3] should be deleted.
+what is valid value:
+All record numbers are numeric or appcode, not mixed.
+The app code is equals to the kintone app's one.
+Expected output
+â
+INFO: Starting to delete records
+..
+.
+INFO:
+3
+records are deleted successfully
+Errors and Warnings
+â
+(TBD)
+Details
+Valid cases
+valid record number value
+Errors and Warnings
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/record-delete/encoding/
+タイトル: Character encoding | cli-kintone
+==================================================
+
+On this page
+Character encoding
+Command-line interface
+â
+// specify a character encoding
+cli-kintone record delete
+--app
+8
+--file-path records.csv
+--encoding
+sjis
+Parameter name
+Short name
+Description
+--encoding
+Character-set encoding for input file
+Specify a character encoding
+â
+The
+--encoding
+option allows to specify a character encoding of the specified CSV file. The following encodings are available:
+Key
+Encode
+utf8
+UTF-8
+sjis
+Shift-JIS
+The default is
+utf8
+Errors
+â
+Specified unsupported encoding
+Mismatch encoding
+Command-line interface
+Specify a character encoding
+Errors
+
+
+
+==================================================
+URL: https://cli.kintone.dev/category/errors-handling/
+タイトル: Errors handling | cli-kintone
+==================================================
+
+ðï¸
+Mismatch encoding
+When executing the import and delete command, an error will be thrown if the specified encoding (default is UTF-8) mismatches the actual encoding of the specified CSV file.
+ðï¸
+Network timeout
+When a network error occurs, an error message will be thrown as below.
+ðï¸
+Retry API Requests
+For some types of API requests, cli-kintone retries request on error.
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/errors/mismatch-encoding/
+タイトル: Mismatch encoding | cli-kintone
+==================================================
+
+On this page
+Mismatch encoding
+When executing the
+import
+and
+delete
+command, an error will be thrown if the specified encoding (default is UTF-8) mismatches the actual encoding of the specified CSV file.
+Error message
+ERROR: Failed to decode the specified CSV file.
+ERROR: The specified encoding
+(
+<<
+encoding
+>>
+)
+might mismatch the actual encoding of the CSV file.
+Implementation
+â
+After decoding the header row of the CSV file by the specified encoding (default is UTF-8), the error will be thrown if the decoded string contains untranslatable characters.
+Untranslatable characters are
+ï¿½
+and
+?
+(described in
+iconv-lite
+)
+Implementation
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/errors/network-timeout/
+タイトル: Network timeout | cli-kintone
+==================================================
+
+On this page
+Network timeout
+When a network error occurs, an error message will be thrown as below.
+ERROR:
+[
+ECONNABORTED
+]
+timeout
+of 600000ms exceeded
+ERROR: The cli-kintone aborted due to a network error.
+ERROR: Please check your network connection.
+Below is the list of network timeout errors that cli-kintone handles
+Socket timeout - Default is 600 seconds
+Implementation
+â
+@kintone/rest-api-client allows the user to specify the socket timeout. So, when establishing a connection with the KintoneRestAPIClient, cli-kintone specifies that option.
+Currently, we consider an error as a network error if It has the error code ECONNABORTED.
+Implementation
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/errors/retry-api-requests/
+タイトル: Retry API Requests | cli-kintone
+==================================================
+
+On this page
+Retry API Requests
+For some types of API requests, cli-kintone retries request on error.
+Retry units
+â
+Retries are performed for each API request. When requests are wrapped in Bulk Request (
+bulkRequest.json
+), retries will be performed for each bulkRequest unit.
+Target API requests
+â
+Download File
+(
+GET /k/v1/file.json
+)
+5xx errors
+Upload File
+(
+POST /k/v1/file.json
+)
+5xx errors
+Strategy
+â
+We use
+an exponential backoff with jitter
+.
+Delay time is calculated as follows:
+delay = Math.min(initialDelay * 2 ** (attemptCount - 1), maxDelay) + jitter;
+- initialDelay: Initial delay time. Default to 1,000ms.
+- attemptCount: Number of request attempt. Maximum 5.
+- maxDelay: Maximum delay time. Default to 60,000ms.
+- jitter: Randomly determined per attempt. Between 0 - 1,000ms.
+Retry units
+Target API requests
+Strategy
+
+
+
+==================================================
+URL: https://cli.kintone.dev/category/proxy/
+タイトル: Proxy | cli-kintone
+==================================================
+
+ðï¸
+Using an HTTP proxy
+Command-line interface
+ðï¸
+Proxy authentication
+Overview
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/proxy/http-proxy/
+タイトル: Using an HTTP proxy | cli-kintone
+==================================================
+
+On this page
+Using an HTTP proxy
+Command-line interface
+â
+cli-kintone record
+<
+subcommand
+>
+--proxy
+<
+proxy URL
+>
+Variable
+Description
+--proxy
+The URL of the proxy server
+Environment variable
+â
+Variable
+Description
+HTTPS_PROXY
+The URL of the proxy server
+The command-line option is prioritized over this variable.
+Connection details
+â
+We use HTTP Tunneling for the request.
+The client sends
+CONNECT
+request to the proxy server
+The Proxy server creates a TCP connection to the destination server
+The client sends an encrypted request to the destination server via the proxy server
+refs.
+â
+Proxy servers and tunneling - HTTP | MDN
+Issue #24 Â· kintone/js-sdk-ja
+Implementation
+â
+We use
+TooTallNate/proxy-agents
+for this function.
+Command-line interface
+Environment variable
+Connection details
+refs.
+Implementation
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/proxy/proxy-authn/
+タイトル: Proxy authentication | cli-kintone
+==================================================
+
+On this page
+Proxy authentication
+Overview
+â
+cli-kintone v1 supports Proxy Authentication with only Proxy Basic Authn for now.
+Users can specify the Proxy Authn by specifying
+--proxy
+CLI option or using environment variables (ENV Vars).
+Usage
+â
+Below are two ways to specify Proxy Authn.
+Using
+--proxy
+option
+â
+Users can specify the Proxy Authn using
+--proxy
+option in the following format:
+--proxy
+http://user:pass@domain:port
+For example:
+./cli-kintone
+--proxy
+http://myuser:mypass@mydomain.com:3128
+Using environment variables
+â
+Users can specify the Proxy Authn using the ENV Vars:
+HTTPS_PROXY
+https_proxy
+These variables should contain the Proxy URL in the following format:
+http://user:pass@domain:port
+For example on Linux/macOS:
+export
+https_proxy
+=
+http://user:pass@domain:port
+note
+The
+--proxy
+option is prioritized over ENV vars
+Overview
+Usage
+Using
+--proxy
+option
+Using environment variables
+
+
+
+==================================================
+URL: https://cli.kintone.dev/reference/logging/
+タイトル: Logging | cli-kintone
+==================================================
+
+On this page
+Logging
+Overview
+â
+cli-kintone supports various logs that help users to check progress, debug, and report issues.
+Users can control log output by command line options.
+Command line options
+â
+Option
+Description
+--log-level <level>
+Change log config level to specified level.
+--verbose
+Change log config level to
+debug
+Log format
+â
+[(datetime)] (log level): (message)
+datetime: The datetime string in ISO8601 format. (
+YYYY-MM-DDTHH:mm:ss.sssZ
+)
+log level: The log event level. Please see log levels for more details.
+message: The message that describes the event.
+On the terminal with color support, the log level is printed with a color.
+If a message has line breaks, each line should be shown with a prefix.
+# When the error message has line breaks:
+# "The first line\nThe second line\nThe third line"
+# The message should be printed as follows
+[
+2023
+-09-14T19:58:55.938Z
+]
+ERROR: The first line
+[
+2023
+-09-14T19:58:55.938Z
+]
+ERROR: The second line
+[
+2023
+-09-14T19:58:55.938Z
+]
+ERROR: The third line
+Log printing destination
+â
+We print all kinds of logs to
+stderr
+.
+Why: The output of command is printed to stdout, so progress/errors is better to be printed to stderr.
+Log levels
+â
+We have two types of log levels:
+log event level
+and
+log config level
+.
+Log event level: How we categorize logs.
+When we send an event message to the logger, each event has a log event level.
+Log config level: How we filter logs to be printed
+When the logger prints logs, the logger will filter logs using the log config level.
+Log event level
+â
+Level
+Color
+Description
+trace
+background green
+Detailed information about internal process status.
+e.g. internal process status.
+debug
+green
+Diagnostic information that is helpful for troubleshooting or testing.
+e.g. detailed progress (nth record processing, ),
+info
+blue
+Information that is helpful for users in normal usage.
+e.g. progress
+warn
+yellow
+The process can continue, but a potential problem happens.
+e.g. exported/imported records are empty
+error
+red
+The process is aborting due to an error.
+e.g. Authentication failure, API limitation, wrong inputs
+fatal
+background red
+The process is aborting with an unexpected error.
+e.g. NPE, OOM, unhandled error from libraries
+Log config level
+â
+The default log config level is
+info
+.
+Event level
+Config level
+trace
+debug
+info
+warn
+error
+fatal
+none
+trace
+included
+excluded
+excluded
+excluded
+excluded
+excluded
+excluded
+debug
+included
+included
+excluded
+excluded
+excluded
+excluded
+excluded
+info
+included
+included
+included
+excluded
+excluded
+excluded
+excluded
+warn
+included
+included
+included
+included
+excluded
+excluded
+excluded
+error
+included
+included
+included
+included
+included
+excluded
+excluded
+fatal
+included
+included
+included
+included
+included
+included
+excluded
+Overview
+Command line options
+Log format
+Log printing destination
+Log levels
+Log event level
+Log config level
+

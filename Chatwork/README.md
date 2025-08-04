@@ -1,6 +1,6 @@
 # Chatwork API ドキュメント
 
-このリポジトリは、[Chatwork API](https://developer.chatwork.com/reference)の仕様に関するドキュメント情報を含んでいます。
+このディレクトリは、[Chatwork API](https://developer.chatwork.com/reference)の仕様に関するドキュメント情報を抽出し、llms.txtとして作成したものです。
 
 ## 概要
 
